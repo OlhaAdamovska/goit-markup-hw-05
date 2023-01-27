@@ -15,7 +15,7 @@
     />
     <link href="./css/styles.css" rel="stylesheet" />
   </head>
-  
+
   <body>
     <header>
       <div class="header-arrangement">
@@ -57,7 +57,7 @@
     <main>
       <section class="main-section">
         <h1 class="main-title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-        <button type="button" class="buy-button">Замовити послугу</button>
+        <button type="button" class="buy-button" data-modal-open>Замовити послугу</button>
       </section>
       <section class="studio-benefits">
         <h2 class="visually-hidden">Переваги нашої вебстудії</h2>
@@ -100,6 +100,7 @@
               alt="Програми для планшетів"
               width="370"
             />
+            <h2 class="desktop-apps">ДЕСКТОПНІ ДОДАТКИ</h2>
           </li>
           <li>
             <img
@@ -107,6 +108,7 @@
               alt="Програми для телефонів"
               width="370"
             />
+            <h2 class="desktop-apps">МОБІЛЬНІ ДОДАТКИ</h2>
           </li>
           <li>
             <img
@@ -114,6 +116,7 @@
               alt="Якісний дизайн"
               width="370"
             />
+            <h2 class="desktop-apps">ДИЗАНЕРСЬКІ РІШЕННЯ</h2>
           </li>
         </ul>
       </section>
@@ -422,6 +425,12 @@
         </ul>
       </section>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close-modal" data-modal-close>Закрити </button>
+    </div>
+    </div>
+  <script src="./js/modal.js"></script>
   </body>
 </html>
 

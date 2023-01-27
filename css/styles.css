@@ -11,6 +11,7 @@
     --button-hover-hlt: #188CE8;
     --footer-color: rgba(255, 255, 255, 0.6);
 }
+ 
 
 /*--- якщо гугл не дасть робото, то дасть будь-який із сан-серіф, до яких належить робото --*/
 
@@ -53,6 +54,8 @@ body {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mail,
 .tel {
@@ -62,6 +65,8 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--body-par-text);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
@@ -108,6 +113,8 @@ text-decoration-color: var(--highlight);
     text-align: center;
     letter-spacing: 0.06em;
     border-radius: 4px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buy-button:hover,
@@ -181,8 +188,9 @@ color :var(--body-text);
     background-color: var(--bgc-team);
 }
 
+/*
 background-color: var(--main-background);
-}
+}*/
 
 /*
 .our-team-names,
@@ -242,6 +250,8 @@ background-color: var(--main-background);
 .mail-footer,
 .tel-footer { 
     text-decoration: none;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .actual-adress:hover,
@@ -511,15 +521,14 @@ button {
     border: 1px transparent;
 }
 
-
+/*
 button {
     border-radius: px;
     padding:;
-    display: inline-block; /* делаем блочніми чтобі высота была*/
-    min-width: ; /*для один кнопок и чтобы при переполнении контента растягивалась в срочку*/
+    display: inline-block; делаем блочніми чтобі высота была
+    min-width: ; для один кнопок и чтобы при переполнении контента растягивалась в срочку
     text-align: center;
-   
-}
+}*/
 
 .main-section {
     border: 1px solid powderblue;
@@ -566,6 +575,7 @@ gap: 30px;*/
 
 .portfolio-navigation-link {
     display: flex;
+    width: 370px;
 }
 
 .portfolio-navigation-example {
@@ -592,7 +602,8 @@ gap: 30px;*/
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-} 
+    width: 370px;
+  } 
 
 .visually-hidden-button-list {
     display: flex;
@@ -769,7 +780,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 /* У фільтрі (список кнопок) Портфоліо ефект тіні при ховері або фокусі на кнопки*/
 
 .button-portfolio-navigation:hover,
-.button-portfolio-navigation: {
+.button-portfolio-navigation:focus {
 box-shadow: inset 0px 3px 1px rgba(0, 0, 0, 0.1),
  0px 1px 2px rgba(0, 0, 0, 0.08),
  0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -839,6 +850,11 @@ background-repeat: no-repeat;
 .telephone {
     width: 10px;
     height: 32px;
+}
+
+/*-------------------------Не працює-----------*/
+.contact-header {
+    transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-header:hover,
@@ -914,9 +930,9 @@ background-repeat: no-repeat;
     background-image: url("../images/svg_icons/facebook.svg");
     background-image: url("../images/svg_icons/linkedin.svg");
     /*background-position: center;
-    background-repeat: no-repeat;*/
-    background-size: 44px;    
-}
+    background-repeat: no-repeat;
+    background-size: 44px; 
+}   
 ---------------------------*/
 
 /*------------------Основні (постійні) клієнти----*/
@@ -1017,6 +1033,9 @@ background-repeat: no-repeat;
     align-items: center;
     width: 44px;
     height: 44px;
+    border-radius: 90%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -1066,6 +1085,7 @@ background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-clients-list {
@@ -1076,6 +1096,7 @@ background-repeat: no-repeat;
 
 .main-clients-list-item-brand {
     fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--------------------------------Ховер і фокус----*/
@@ -1098,7 +1119,7 @@ background-repeat: no-repeat;
 
 .social-links-footer-img-join {
     fill: #FFFFFF;
-    
+    transition: fill 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--------------------------------Анти-прозорість фону 10%-----*/
@@ -1114,6 +1135,10 @@ background-repeat: no-repeat;
    
 }
 
+.social-links-footer-lis-join {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .social-links-footer-lis-join:hover,
 .social-links-footer-lis-join:focus {
     background-color: #2196F3;
@@ -1121,10 +1146,292 @@ background-repeat: no-repeat;
 
 /*
 .social-links-footer-img-join {
-    display: flex;
+  display: flex;
     justify-content: center;
-    align-items: center;*/
+    align-items: center;
+}*/
+
+/*-------------------------------------------5 модуль--------*/
+
+/*---Підкреслення поточної сторінки-------*/
+
+.navigation-link-current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    bottom: -12px;
+    left: 0px;
+    position: absolute;
+    background-color: var(--highlight);
+    border-radius: 2px;
+    display: block;
+}
+
+.navigation-link-current {
+    position: relative;
+}
+
+/*----------------------------Модальне вікно------------------*/
+
+.backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+
+    transition: background-color 0ms cubic-bezier(0.4, 0, 0.2, 1), 
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.modal {
+    /*position: fixed; тоді прокручується зі сторінкою */
+    position: absolute;
+    top: 221px;
+    left: 536px;
+    /* якщо потрібно то синтаксис такий transform: translate(50%,50%);*/
+
+    min-width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+  
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Еквівалент 
+.is-hidden {
+    display: none;
+}
+*/
+
+.close-modal {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/*------------------------Анімація модального вікна-----------------*/
+
+.is-hidden {
+    pointer-events: none;
+    opacity: 1;
+
+    /*transition: opacity 2000ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(0.5);*/
+}
+
+/*
+.is-hidden {
+    pointer-events: none;
+    opacity: 1;
+}
+*/
+
+.modal {
+    transition: opacity 2000ms cubic-bezier(linear),
+            transform 2500ms cubic-bezier(linear),
+            background-color 3000ms cubic-bezier(linear);
+        transform: scale(1);
+        opacity: 1;
+}
+
+.backdrop.is-hidden .modal {
+    transform: scale(0.8);
+    opacity: 0.5;
+    background-color: red;
+    /*
+    transition: opacity 2000ms cubic-bezier(0.4, 0, 0.2, 1),
+        transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);*/
+}
+/*------!!!!!!!!!!!!!!!так не працює бо із-хідден в слоз-модал в штмл
+.close-modal:focus .is-hidden {
+    transform: scale(0.1);
+    opacity: 0;
+    pointer-events: none;
+    background-color:rgb(30, 210, 42)
+}*/
+/*
+.close-modal:focus .backdrop {
+    background-color: rgb(21, 191, 55);
+    opacity: 0;
+    pointer-events: none;
+}*/
+
+/*----------------------------------------кінець вікна---------------------------*/
+
+.portfolio-navigation-example-of {
+    position: relative;
+}
+
+.example-bkg-overlay {
+    position: absolute;
+    width: 370px;
+    height: 294px;
+    top: 0px;
+    left: 0px;
+    
+    background-color: #2195f390;
+    /*---РОблю прозорим щоби при наведенні проявл в анім скопіювала із is-hidden--*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Еквівалент 
+.is-hidden {
+    display: none;
+}
+*/
+
+.portfolio-navigation-example-overlay-text {
+    position: absolute;
+    top: 63px;
+    left: 24px;
+    
+    width: 322px;
+    height: 168px;
+
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+   
+    text-align: cover;
+}
+
+/*----Здається, що це просто Фігми виділення, але робила ховер фокус виділення теж---
+.portfolio-navigation-example-overlay-text:hover,
+.portfolio-navigation-example-overlay-text:focus {
+    text-decoration: underline var(--highlight) 2px;
+}
+
+------------------------- Щоби не совалось---------
+.portfolio-navigation-example {
+    border: 4px solid transparent;
+}
+
+.portfolio-navigation-example:hover,
+.portfolio-navigation-example:focus {
+    border: 4px solid #2196F3;
+  
+}
+
+.portfolio-navigation-link-img {
+    max-width: 100%;
+    width: 370px;
+    z-index: -1;
+    padding: 0px;
+    margin: 0px;
+}
+/*
+
+/*------------------На основній стор підписи картинок --*/
+.work-list > li {
+    position: relative;
+}
+
+.desktop-apps {
+    position:absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: #2F303A80;
+    width: 100%;
+    height: 70px;
+    
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-top: 27px;
+}
+
+/*-------------------------------------Анімація--------*/
+/*---------------------------Портфоліо картки-----*/
+
+/* зробила .example-bkg-overlay проз вище*/
+
+.example-bkg-overlay {
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity;
+    transform: translateY(+100%);
+    opacity: 1;
+}
+
+/* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity, color;*/
+
+.portfolio-navigation-example-of {
+    overflow: hidden;
+}
+
+/*---А так не працює!!! Бо рухається саме він, а блок, що переповнюється, вміщає в себе рухаючийся елем 
+.example-bkg-overlay {
+    overflow: hidden;
+}
+*/
+
+.portfolio-navigation-example:hover .example-bkg-overlay,
+.portfolio-navigation-example:focus .example-bkg-overlay {
+    
+    opacity: 1;
+    transform: translateY(0);
    
 }
 
-/*--------- Module---------- 5 */
+
+/*----------------------------Тіні в портфоліо анімую----------*/
+
+/*---У картках сторінки Портфоліо є ефект тіні при ховері в будь-якому місці картки*/
+
+.portfolio-navigation-example {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+}
+
+.portfolio-navigation-example:hover,
+.portfolio-navigation-example:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* У фільтрі (список кнопок) Портфоліо ефект тіні при ховері або фокусі на кнопки*/
+
+.button-portfolio-navigation {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+}
+
+.button-portfolio-navigation:hover,
+.button-portfolio-navigation:focus {
+    box-shadow: inset 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.button-portfolio-navigation {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--body-text);
+}
+
+.button-portfolio-navigation:hover,
+.button-portfolio-navigation:focus {
+    color: var(--main-background);
+    background-color: var(--highlight);
+    cursor: pointer;
+}
